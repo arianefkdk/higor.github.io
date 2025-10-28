@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+              body { 
+                margin: 0; 
+                padding: 16px; 
+                background-color: #070707;
+              }
+            </style>
+          </head>
+          <body>
+
+
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Para o Higor 💖</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top left, #ffe0f0, #ffd6ec, #fff0f8);
+      font-family: "Poppins", "Comic Sans MS", sans-serif;
+      color: #4b2a3a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Container principal */
+    .container {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 25px;
+      box-shadow: 0 10px 40px rgba(255, 120, 170, 0.4);
+      padding: 30px 40px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+      color: #ff6fa3;
+    }
+
+    .message {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      min-height: 120px;
+      white-space: pre-line;
+    }
+
+    button {
+      background: linear-gradient(90deg, #ff9ccf, #ff6fa3);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 5px 10px rgba(255, 100, 160, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 14px rgba(255, 120, 180, 0.4);
+    }
+
+    /* corações flutuando */
+    .heart {
+      position: fixed;
+      color: #ff6fa3;
+      font-size: 20px;
+      animation: floatUp 5s linear forwards;
+      pointer-events: none;
+      filter: drop-shadow(0 4px 6px rgba(255, 105, 180, 0.2));
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    /* brilhinhos */
+    .sparkle {
+      position: fixed;
+      font-size: 12px;
+      color: #fff;
+      text-shadow: 0 0 6px #ffb0d6, 0 0 10px #ffd6eb;
+      opacity: 0.9;
+      animation: twinkle 3s linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes twinkle {
+      0% { transform: scale(0.8) translateY(0); opacity: 0.8; }
+      50% { transform: scale(1.4) translateY(-20px); opacity: 1; }
+      100% { transform: scale(0.8) translateY(-60px); opacity: 0; }
+    }
+
+    /* Hello Kittys animadas */
+    .kitty {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/en/0/05/Hello_Kitty_character_portrait.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: kittyFloat 8s linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes kittyFloat {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Fundo cintilante */
+    .shine-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 70%);
+      background-size: 300% 300%;
+      animation: shine 10s ease infinite;
+      z-index: 0;
+    }
+
+    @keyframes shine {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+  </style>
+
+
+  <div class="shine-bg"></div>
+
+  <div class="container">
+    <h1>💖 Para o Higor 💖</h1>
+    <div class="message" id="message">Obrigada por me apoiar em tudo 💪</div>
+    <button id="nextBtn">Tocar 💖</button>
+  </div>
+
+  <script>
+    const messages = [
+      "Oie! Toca aqui✋🏻",
+      "Toca de novo👇",
+      "Só mais uma vez 💞",
+      "Abriu! Agora você tá “drentro” 😍",
+      "É só uma maneira divertida de dizer o quanto eu te amo 💗",
+      "E o quanto amo passar o tempo com você 💕",
+      "Cada segundo...",
+      "Cada risada, palhaçada 😂",
+      "Você é meu mundo 🌎",
+      "Minha vida ✨",
+      "Amo amar você! Você ilumina meus dias ☀️",
+      "Obrigada por ser o homem que você é 💭",
+      "Eu te amo e te admiro. Tenho orgulho do homem que você é 💖",
+      "Te amo neném 💋",
+      "Fim! 💝",
+      // Novas mensagens adicionadas
+      "Lembro da primeira vez que nos vimos... foi mágico! ✨",
+      "Você me faz sorrir todos os dias 😊",
+      "Obrigada por me apoiar em tudo 💪",
+      "Sonho com nosso futuro juntos 🌟",
+      "Você é meu melhor amigo e meu amor eterno 💕",
+      "Cada momento ao seu lado é um tesouro 🏆",
+      "Te amo mais do que palavras podem dizer 💖",
+      "Você é a razão do meu sorriso matinal ☀️",
+      "Obrigada por ser tão carinhoso e gentil 🥰",
+      "Nosso amor é infinito, como as estrelas no céu 🌌"
+    ];
+
+    const msg = document.getElementById("message");
+    const btn = document.getElementById("nextBtn");
+    let index = 0;
+
+    btn.addEventListener("click", () => {
+      index++;
+      if (index < messages.length) {
+        msg.textContent = messages[index];
+        btn.textContent = index === messages.length - 1 ? "Rever 💞" : "Tocar 💖";
+        createHearts(6);
+        createSparkles(6);
+        if (Math.random() > 0.7) createKitty(); // às vezes aparece uma Hello Kitty
+      } else {
+        index = 0;
+        msg.textContent = messages[0];
+        btn.textContent = "Tocar 💖";
+      }
+    });
+
+    // corações animados
+    function createHearts(amount) {
+      for (let i = 0; i < amount; i++) {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.textContent = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 15 + "px";
+        heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 5000);
+      }
+    }
+
+    // brilhinhos ✨
+    function createSparkles(amount) {
+      for (let i = 0; i < amount; i++) {
+        const sp = document.createElement("div");
+        sp.classList.add("sparkle");
+        sp.textContent = "✨";
+        sp.style.left = Math.random() * 100 + "vw";
+        sp.style.top = Math.random() * 100 + "vh";
+        sp.style.fontSize = 10 + Math.random() * 10 + "px";
+        sp.style.animationDuration = 2 + Math.random() * 3 + "s";
+        document.body.appendChild(sp);
+        setTimeout(() => sp.remove(), 4000);
+      }
+    }
+
+    // Hello Kittys 🩷
+    function createKitty() {
+      const kitty = document.createElement("div");
+      kitty.classList.add("kitty");
+      kitty.style.left = Math.random() * 100 + "vw";
+      kitty.style.animationDuration = 7 + Math.random() * 4 + "s";
+      document.body.appendChild(kitty);
+      setTimeout(() => kitty.remove(), 9000);
+    }
+
+    // inicia com alguns brilhinhos de fundo
+    setInterval(() => createSparkles(2), 1000);
+  </script>
+
+
+
+        
+      <div class="sparkle" style="left: 60.8615vw; top: 90.9147vh; font-size: 15.414px; animation-duration: 2.06567s;">✨</div><div class="sparkle" style="left: 4.70335vw; top: 16.6424vh; font-size: 16.3674px; animation-duration: 3.98113s;">✨</div><div class="sparkle" style="left: 9.28294vw; top: 48.3049vh; font-size: 12.5554px; animation-duration: 2.24051s;">✨</div><div class="sparkle" style="left: 69.9053vw; top: 31.164vh; font-size: 13.9552px; animation-duration: 3.73498s;">✨</div><div class="sparkle" style="left: 19.6238vw; top: 62.4539vh; font-size: 14.7641px; animation-duration: 4.10998s;">✨</div><div class="sparkle" style="left: 80.7813vw; top: 85.202vh; font-size: 12.5563px; animation-duration: 4.7651s;">✨</div><div class="sparkle" style="left: 48.5114vw; top: 92.6678vh; font-size: 10.8016px; animation-duration: 3.62744s;">✨</div><div class="sparkle" style="left: 83.0626vw; top: 57.5217vh; font-size: 19.7208px; animation-duration: 3.96337s;">✨</div><div class="sparkle" style="left: 36.7077vw; top: 59.0526vh; font-size: 16.8703px; animation-duration: 4.59611s;">✨</div><div class="sparkle" style="left: 52.8268vw; top: 42.8546vh; font-size: 16.7164px; animation-duration: 2.56983s;">✨</div></body></html>
